@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import { Category } from "../interfaces/category.interface";
+import type { Category } from "@/interfaces/category.interface";
 import { API_ROUTES, http } from "../api";
 
 export const useCategoryStore = defineStore('categories', () => {

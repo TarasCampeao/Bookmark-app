@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import { useProfileStore } from '@/stores/profile.store';
 
 const store = useProfileStore();
