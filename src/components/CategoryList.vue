@@ -31,4 +31,8 @@ onMounted(() => {
     flex-direction: column;
     gap: 34px;
 }
+.active-link {
+    font-size: 24px;
+    font-weight: 700;
+}
 </style>
