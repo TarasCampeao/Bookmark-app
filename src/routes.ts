@@ -3,7 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 export const router = createRouter({
     routes: [
         {
-            path: '/', component: () => import('./views/AuthView.vue'),
+            path: '/:pathMatch(.*)*',
+            name: 'NotFound',
+            component: () => import('./views/NotFoundView.vue')
+        },
+        {
+            path: '/',
+            component: () => import('./views/AuthView.vue'),
         },
         {
             path: '/main',
