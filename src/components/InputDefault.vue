@@ -14,7 +14,8 @@ const input = useTemplateRef<HTMLInputElement>('input');
     border: none;
     border-bottom: 1px solid var(--color-fg);
     font-size: 24px;
-    min-width: 274px;
+    min-width: 200px;
+    max-width: 300px;
 }
 .default-input::placeholder {
     color: var(--color-inactive);

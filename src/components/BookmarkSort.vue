@@ -1,12 +1,17 @@
 <script lang="ts" setup>
-import { defineProps } from "vue";
+import { defineProps, defineEmits } from "vue";
 
 const { option } = defineProps<{ option: string }>()
 
 const SORT_OPTIONS = [
     { option: "date", name: "By date"},
     { option: "title", name: "By name" },
-]
+];
+
+const emit = defineEmits<{
+    (e: 'sort', option: string): void
+}>();
+
 </script>
 
 <template>
@@ -15,6 +20,7 @@ const SORT_OPTIONS = [
             v-for="item in SORT_OPTIONS"
             :key="item.option"
             class="sort-item"
+            @click="() => emit('sort', item.option)"
             :class="option == item.option ? 'active' : ''"
         >
             {{ item.name }}

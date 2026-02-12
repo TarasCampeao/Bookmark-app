@@ -24,6 +24,7 @@ function updateCategory() {
         return;
     }
     categoryStore.updateCategory(newCategoryName.value, category.alias, category.id);
+    //newCategoryName.value = '';
     toggleEdit();
 }
 

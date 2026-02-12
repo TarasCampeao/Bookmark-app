@@ -4,6 +4,8 @@ import type { Bookmark } from '@/interfaces/bookmark.interface';
 import ButtonIconBig from './ButtonIconBig.vue';
 import IconLinkWhite from '@/icons/IconLinkWhite.vue';
 import IconTrashWhite from '@/icons/IconTrashWhite.vue';
+import { useBookmarkStore } from '@/stores/bookmark.store';
+
 
 const { title, image, url, id, category_id } = defineProps<Bookmark>();
 const bookmarkStore = useBookmarkStore();
@@ -16,14 +18,12 @@ function openLink() {
 
 <template>
     <div class="bookmark-card">
-        <div class="bookmark-card__image" :style="{ backgroundImage: `url:(${image})` }">
-
-        </div>
+        <div class="bookmark-card__image" :style="{ backgroundImage: `url:(${image})` }"></div>
         <div class="bookmark-card__title">
             {{ title }}
         </div>
         <div class="bookmark-card__footer">
-            <ButtonIconBig @click="() => bookmarkStore.deleteBookmark()">
+            <ButtonIconBig @click="() => bookmarkStore.deleteBookmark(id, category_id)">
                 <IconTrashWhite />
             </ButtonIconBig>
             <ButtonIconBig @click="openLink()">
