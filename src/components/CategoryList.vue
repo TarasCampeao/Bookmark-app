@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
     <ul class="category-list">
-        <li v-for="item in store.categories" :key="item.id">
+        <li v-for="item in store.categories" :key="item.id" class="category-item">
             <RouterLink :to="`/main/${item.alias}`">{{ item.name }}</RouterLink>
         </li>
         <li>
@@ -26,13 +26,37 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.profile-avatar + .category-list {
+    margin-top: 30px;
+}
 .category-list {
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 15px;
 }
 .active-link {
     font-size: 24px;
     font-weight: 700;
+}
+.category-item a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-fg);
+    position: relative;
+    display: inline-block;
+}
+.category-item a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-fg);
+    transition: width 0.3s ease;
+}
+.category-item a:hover:after,
+.category-item a.router-link-active:after {
+    width: 100%;
 }
 </style>
