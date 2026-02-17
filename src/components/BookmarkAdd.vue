@@ -31,7 +31,7 @@ function toggleIsEdited() {
             <IconPlusBig />
         </ButtonIcon>
         <div v-else class="bookmark-form">
-            <InputDefault v-model="newUrl" />
+            <InputDefault v-model="newUrl" is-focused />
             <ButtonIcon @click="addBookmark">
                 <IconOk />
             </ButtonIcon>

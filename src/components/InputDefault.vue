@@ -1,8 +1,17 @@
 <script lang="ts" setup>
-import { useTemplateRef } from 'vue';
+import { onMounted, useTemplateRef } from 'vue';
 
 const data = defineModel<string>();
 const input = useTemplateRef<HTMLInputElement>('input');
+
+const { isFocused = false } = defineProps<{ isFocused?: boolean }>();
+
+onMounted(() => {
+    if (isFocused && input.value) {
+        input.value.focus();
+    }
+});
+
 </script>
 
 <template>

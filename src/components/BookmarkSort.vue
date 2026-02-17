@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, defineEmits } from "vue";
+import { defineEmits } from "vue";
 
 const { option } = defineProps<{ option: string }>()
 
