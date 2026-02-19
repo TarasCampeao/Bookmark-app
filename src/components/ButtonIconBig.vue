@@ -17,6 +17,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50px;
+    transition: .3s linear all;
     border: 3px solid var(--color-bg);
 }
 .button-icon:hover {
