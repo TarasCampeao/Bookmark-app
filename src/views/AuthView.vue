@@ -25,28 +25,22 @@ function onSubmit(event: Event) {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .auth {
     display: grid;
     place-items: center;
     min-height: 100vh;
-}
-.auth__header {
-    font-size: 52px;
-    font-weight: 700;
-}
-.auth__form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
-}
-.auth__box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 30px;
+    &__header {
+        font-size: 52px;
+        font-weight: 700;
+    }
+    &__form,
+    &__box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
 }
 </style>

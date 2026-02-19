@@ -54,15 +54,15 @@ function deleteCategory() {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .category-header {
     display: flex;
     justify-content: space-between;
     min-width: 100%;
-}
-.category-header__edit,
-.category-header__actions {
-    display: flex;
-    gap: 8px;
+    &__edit,
+    &__actions {
+        display: flex;
+        gap: 8px;
+    }
 }
 </style>

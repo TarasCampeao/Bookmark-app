@@ -6,7 +6,7 @@
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .index {
     display: flex;
     flex-direction: column;
@@ -14,12 +14,12 @@
     justify-content: center;
     gap: 20px;
     margin-top: 120px;
-}
-.index__header {
-    font-size: 24px;
-    font-weight: 500;
-}
-.index__description {
-    font-size: 16px;
+    &__header {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__description {
+        font-size: 16px;
+    }
 }
 </style>

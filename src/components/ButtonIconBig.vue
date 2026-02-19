@@ -7,7 +7,7 @@
     </button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .button-icon-big {
     display: flex;
     align-items: center;

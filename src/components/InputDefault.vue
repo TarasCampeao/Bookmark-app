@@ -18,15 +18,15 @@ onMounted(() => {
     <input class="default-input" v-model="data" ref="input" />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .default-input {
     border: none;
     border-bottom: 1px solid var(--color-fg);
     font-size: 24px;
     min-width: 200px;
     max-width: 300px;
-}
-.default-input::placeholder {
-    color: var(--color-inactive);
+    &::placeholder {
+        color: var(--color-inactive);
+    }
 }
 </style>

@@ -18,7 +18,7 @@ onMounted(() => {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .profile-avatar {
     display: flex;
     flex-direction: column;
@@ -29,10 +29,10 @@ onMounted(() => {
     height: 80px;
     overflow: hidden;
     border-radius: 50%;
-}
-.image-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 </style>

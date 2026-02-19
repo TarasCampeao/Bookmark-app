@@ -18,22 +18,22 @@ function redirectToMain() {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .not-found {
     display: grid;
     place-items: center;
     min-height: 100vh;
-}
-.not-found__header {
-    font-size: 128px;
-    font-weight: 700;
-    line-height: 1;
-}
-.not-found__form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 52px;
+    &__header {
+        font-size: 128px;
+        font-weight: 700;
+        line-height: 1;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 52px;
+    }
 }
 </style>

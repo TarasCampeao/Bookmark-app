@@ -29,7 +29,7 @@ const emit = defineEmits<{
     </Transition>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .popup__cover {
     position: fixed;
     top: 0;

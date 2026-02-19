@@ -66,7 +66,7 @@ const truncate = (value: string | null | undefined, length = 0): string => {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .bookmark-card {
     border-radius: 30px;
     max-width: 400px;
@@ -76,54 +76,65 @@ const truncate = (value: string | null | undefined, length = 0): string => {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    &__image {
+        height: 160px;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .3s linear all; 
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__title {
+        color: var(--color-bg);
+        font-size: 16px;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__letter {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: .3s linear all;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0 0 0;
+    }
 }
-.bookmark-card__image {
-    height: 160px;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-}
-.bookmark-card__image:hover img,
-.bookmark-card__letter:hover {
-    transform: scale(1.1);
-}
-.bookmark-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .3s linear all; 
-}
-.bookmark-card__title {
-    color: var(--color-bg);
-    font-size: 16px;
-    font-weight: 500;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.bookmark-card__footer {
-    display: flex;
-    justify-content: space-between;
-    margin: auto 0 0 0;
-}
-.bookmark-card__letter {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    transition: .3s linear all;
-}
-.button-icon-big svg {
-    transition: .3s linear all;
-}
-.button-icon-big:hover svg {
-    transform: scale(1.25);
+.button-icon-big {
+    &:hover {
+        svg {
+            transform: scale(1.25);
+        }
+    }
+    svg {
+        transition: .3s linear all;
+    }
 }
 </style>

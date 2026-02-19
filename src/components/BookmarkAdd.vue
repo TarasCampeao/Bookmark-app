@@ -39,7 +39,7 @@ function toggleIsEdited() {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .bookmark-add {
     display: flex;
     align-items: center;

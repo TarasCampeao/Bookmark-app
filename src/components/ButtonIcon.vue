@@ -8,18 +8,18 @@ const { size = 32 } = defineProps<{ size?: number }>();
   </button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .button-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-fg);
-  cursor: pointer;
-  border-radius: 50px;
-  border: none;
-  transition: .3s linear all;
-}
-.button-icon:hover {
-  background: var(--color-fg-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-fg);
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    transition: .3s linear all;
+    &:hover {
+        background: var(--color-fg-hover);
+    }
 }
 </style>

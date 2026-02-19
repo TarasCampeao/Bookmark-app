@@ -5,28 +5,29 @@ import CategoryList from '../components/CategoryList.vue';
 </script>
 
 <template>
-  <div class="app">
-    <nav class="nav">
-      <ProfileAvatar />
-      <CategoryList />
-    </nav>
-    <main>
-      <RouterView />
-    </main>
-  </div>
+    <div class="app">
+        <nav class="nav">
+            <ProfileAvatar />
+            <CategoryList />
+        </nav>
+        <main>
+            <RouterView />
+        </main>
+    </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+$topGap: 80px;
 .app {
-  display: flex;
-  gap: 80px;
-  min-height: calc(100vh - 140px);
-  padding-top: 140px;
+    display: flex;
+    gap: 60px;
+    min-height: calc(100vh - $topGap);
+    padding-top: $topGap;
 }
 .nav {
-  min-width: 250px;
+    min-width: 250px;
 }
 main {
-  width: 100%;
+    width: 100%;
 }
 </style>

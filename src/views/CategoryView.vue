@@ -60,7 +60,7 @@ console.log(categoryStore.getCategoryByAlias(route.params.alias));
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .category-list {
     margin-top: 30px;
     display: grid;
