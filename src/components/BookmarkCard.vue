@@ -20,13 +20,28 @@ function deleteBookmark() {
     isOpened.value = !isOpened.value;
     bookmarkStore.deleteBookmark(id, category_id);
 }
+
+
+const truncate = (value: string | null | undefined, length = 0): string => {
+    if (!value) return '';
+    if (length <= 0) return value;
+    return value.length > length ? value.substring(0, length) : value;
+}
 </script>
 
 <template>
     <div class="bookmark-card">
-        <div class="bookmark-card__image" :style="{ backgroundImage: `url:(${image})` }"></div>
+        <div
+            class="bookmark-card__image"
+            :style="image ? { backgroundImage: `url(${image})` } : { background: `rgb(112 112 178)` }">
+            <div
+                class="bookmark-card__letter"
+                v-if="!image">
+                {{ truncate(title, 1) || truncate(url, 1) }}
+            </div>
+        </div>
         <div class="bookmark-card__title">
-            {{ title }}
+            {{ title || url }}
         </div>
         <div class="bookmark-card__footer">
             <ButtonIconBig @click="isOpened = !isOpened">
@@ -71,5 +86,16 @@ function deleteBookmark() {
 .bookmark-card__footer {
     display: flex;
     justify-content: space-between;
+}
+.bookmark-card__letter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 </style>

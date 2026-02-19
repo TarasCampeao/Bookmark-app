@@ -19,11 +19,12 @@ import CategoryList from '../components/CategoryList.vue';
 <style scoped>
 .app {
   display: flex;
-  gap: 200px;
+  gap: 80px;
   min-height: calc(100vh - 140px);
+  padding-top: 140px;
 }
 .nav {
-  min-width: 400px;
+  min-width: 250px;
 }
 main {
   width: 100%;
