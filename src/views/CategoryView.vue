@@ -49,22 +49,34 @@ console.log(categoryStore.getCategoryByAlias(route.params.alias));
     <div>
         <CategoryHeader v-if="category" :category="category" />
         <BookmarkSort :option="bookmarkStore.activeSort" @sort="sortBookmarks" />
-        <div class="category-list">
-            <BookmarkCard
-                v-for="item in bookmarkStore.bookmarks"
-                :key="item.index"
-                v-bind="item"
-            />
-            <BookmarkAdd v-if="category" :category_id="category.id" />
+        <div class="bookmark-box">
+            <div class="bookmark-list">
+                <BookmarkCard
+                    v-for="item in bookmarkStore.bookmarks"
+                    :key="item.index"
+                    v-bind="item"
+                />
+                <BookmarkAdd v-if="category" :category_id="category.id" />
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-.category-list {
+.bookmark-list {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    height: 80vh;
+    overflow: overlay;
+    padding-right: 20px;
+    margin-right: -20px;
+    @media (min-width: 1025px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.bookmark-box {
+    overflow: hidden;
 }
 </style>

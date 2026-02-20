@@ -18,11 +18,16 @@ import CategoryList from '../components/CategoryList.vue';
 
 <style lang="scss" scoped>
 $topGap: 80px;
+$topSticky: 40px;
 .app {
-    display: flex;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 30px;
     min-height: calc(100vh - $topGap);
     padding-top: $topGap;
+    @media (min-width: 1025px) {
+        gap: 60px;
+    }
 }
 .nav {
     min-width: 250px;
