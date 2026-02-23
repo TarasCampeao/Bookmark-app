@@ -76,6 +76,7 @@ const truncate = (value: string | null | undefined, length = 0): string => {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    height: 370px;
     &__image {
         height: 160px;
         border-radius: 20px;

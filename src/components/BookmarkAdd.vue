@@ -46,6 +46,7 @@ function toggleIsEdited() {
     justify-content: center;
     border-radius: 30px;
     border: 1px dashed var(--color-fg);
+    height: 370px;
 }
 .bookmark-form {
     display: flex;
