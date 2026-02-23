@@ -1,5 +1,7 @@
 # Bookmark-app
 
+<img width="1637" height="952" alt="image" src="https://raw.githubusercontent.com/TarasCampeao/Bookmark-app/refs/heads/main/public/project.png" />
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
